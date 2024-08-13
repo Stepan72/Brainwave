@@ -2,12 +2,26 @@
 import Image from "next/image";
 import { brainwave } from "@/assets";
 import { navigation } from "@/constants";
-import { usePathname } from "next/navigation";
+import { useParams } from "next/navigation";
 import Button from "./Button";
+import { useEffect, useState } from "react";
 
 const Header = () => {
-  const pathname = usePathname();
-  console.log(pathname);
+  const params = useParams();
+  const [currentPath, setCurrentPath] = useState(window.location.hash);
+
+  useEffect(() => {
+    const handleHashChange = () => {
+      setCurrentPath(window.location.hash);
+    };
+
+    handleHashChange();
+    window.addEventListener("hashchange", handleHashChange);
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, [params]);
 
   return (
     <div className="fix top-0 left-0 w-full z-50 bg-n-8/90 backdrop-blur-sm border-b border-n-6 lg:bg-n-8/90">
@@ -25,7 +39,7 @@ const Header = () => {
                 className={`block relative font-code text-2xl uppercase text-n-1 transition-colors hover:text-color-1 px-6 py-6 md:py-8 lg:-mr-0.25 lg:text-xs lg:font-semibold ${
                   nav.onlyMobile ? "lg:hidden" : ""
                 } ${
-                  nav.url === pathname ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
+                  nav.url === currentPath ? "z-2 lg:text-n-1" : "lg:text-n-1/50"
                 } leading-5 lg:hover:text-n-1 xl:px-12`}
               >
                 {nav.title}
