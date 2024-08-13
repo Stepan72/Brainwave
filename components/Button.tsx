@@ -6,7 +6,7 @@ interface ButtonProps {
   href?: string;
   className?: string;
   px?: string;
-  white?: string;
+  white?: boolean;
 }
 
 const Button = ({
@@ -15,7 +15,7 @@ const Button = ({
   href,
   className,
   px,
-  white,
+  white = false,
 }: ButtonProps) => {
   const _className = `button relative inline-flex items-center justify-center h-11 transition-colors hover:text-color-1 ${
     px || "px-7"
@@ -27,7 +27,7 @@ const Button = ({
     return (
       <a href={href} className={_className}>
         <span className={spanClasses}>{children}</span>
-        {ButtonSvg(false)}
+        {ButtonSvg(white)}
       </a>
     );
   }
@@ -36,7 +36,7 @@ const Button = ({
     return (
       <button className={_className} onClick={onClick}>
         <span className={spanClasses}>{children}</span>
-        {ButtonSvg(false)}
+        {ButtonSvg(white)}
       </button>
     );
   }
