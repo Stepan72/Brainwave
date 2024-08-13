@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 
 const Header = () => {
   const params = useParams();
-  const [currentPath, setCurrentPath] = useState(window.location.hash);
+  const [currentPath, setCurrentPath] = useState<null | string>(null);
 
   useEffect(() => {
     const handleHashChange = () => {
