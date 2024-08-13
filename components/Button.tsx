@@ -34,7 +34,7 @@ const Button = ({
 
   if (onClick) {
     return (
-      <button className={_className}>
+      <button className={_className} onClick={onClick}>
         <span className={spanClasses}>{children}</span>
         {ButtonSvg(false)}
       </button>
