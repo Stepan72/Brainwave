@@ -20,7 +20,7 @@ const Hero = () => {
       customPaddings=""
     >
       <div className="container relative overflow-hidden">
-        {/* Верхняя часть */}
+        {/* Upper Part */}
         <div className="relative z-1 max-w-[62rem] mx-auto text-center mb-[4rem] md:mb-20 lg:mb-[6rem]">
           <h1 className="h1 mb-6">
             Explore the Possibilities &nbsp;of AI&nbsp;Chatting with{" "}
@@ -45,7 +45,7 @@ const Hero = () => {
           </Button>
         </div>
 
-        {/* Нижняя часть */}
+        {/* Bottom Part */}
         <div className="relative max-w-[23rem] mx-auto md:max-w-5xl xl:mb-24">
           <div className="relative z-1 p-0.5 rounded-2xl bg-conic-gradient">
             <div className="relative bg-n-8 rounded-[1rem]">
