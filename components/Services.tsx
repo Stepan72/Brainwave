@@ -76,8 +76,8 @@ const Services = () => {
               <div className="absolute inset-0 flex flex-col justify-end p-8 bg-gradient-to-b from-n-8/0 to-n-8/90 lg:p-15">
                 <h4 className="h4 mb-4">Photo Editing</h4>
                 <p className="body-2 mb-[3rem] text-n-3">
-                  Automatically enhance your photos using our AI app's photo
-                  editing feature. Try it now!
+                  Automatically enhance your photos using our AI app&apos;s
+                  photo editing feature. Try it now!
                 </p>
               </div>
               <PhotoChatMessage />
@@ -87,8 +87,8 @@ const Services = () => {
               <div className="py-12 px-4 xl:px-8">
                 <h4 className="h4 mb-4">Video Generation</h4>
                 <p className="body-2 mb-[2rem] text-n-3">
-                  The world's most powerful AI photo and video art generation
-                  engine. What will you create?
+                  The world&apos;s most powerful AI photo and video art
+                  generation engine. What will you create?
                 </p>
                 <ul className="flex justify-between items-center">
                   {brainwaveServicesIcons.map((icon, index) => {
