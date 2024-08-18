@@ -3,6 +3,7 @@ import Benefits from "@/components/Benefits";
 import Collaboration from "@/components/Collaboration";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
+import Roadmap from "@/components/Roadmap";
 import Services from "@/components/Services";
 
 export default function App() {
@@ -14,6 +15,7 @@ export default function App() {
         <Collaboration />
         <Services />
         <Pricing />
+        <Roadmap />
       </div>
       <ButtonGradient />
     </div>
