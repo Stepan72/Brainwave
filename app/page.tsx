@@ -9,13 +9,14 @@ import Services from "@/components/Services";
 export default function App() {
   return (
     <div>
-      <Hero />
-      <Benefits />
-      <Collaboration />
-      <Services />
-      <Pricing />
-      <Roadmap />
-
+      <div className="max-lg:pt-[5.25rem]">
+        <Hero />
+        <Benefits />
+        <Collaboration />
+        <Services />
+        <Pricing />
+        <Roadmap />
+      </div>
       <ButtonGradient />
     </div>
   );
