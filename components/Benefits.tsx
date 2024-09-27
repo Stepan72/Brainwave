@@ -20,12 +20,12 @@ const Benefits = () => {
             return (
               <div
                 key={benefit.id}
-                className="block relative p-0.5 md:max-w-[24rem]"
+                className="relative p-0.5 max-w-[24rem] bg-no-repeat bg-[length:100%_100%]"
               >
                 <Image
                   src={benefit.backgroundUrl}
                   alt="background"
-                  className="w-auto h-auto absolute inset-0"
+                  className="w-auto h-auto absolute inset-0 z-1"
                 />
                 <div className="relative z-2 flex flex-col min-h-[22rem] p-[2.4rem]">
                   <h5 className="h5 mb-5">{benefit.title}</h5>
@@ -47,7 +47,7 @@ const Benefits = () => {
                 {benefit.light && <GradientLight />}
 
                 <div
-                  className="absolute inset-0.5 bg-n-8"
+                  className="absolute z-2 inset-0.5 bg-n-8 opacity-0 transition-opacity hover:opacity-20"
                   style={{ clipPath: "url(#benefits)" }}
                 >
                   <Image
@@ -55,7 +55,7 @@ const Benefits = () => {
                     width={380}
                     height={362}
                     alt={benefit.title}
-                    className="w-full h-full object-cover opacity-0 transition-opacity hover:opacity-10"
+                    className="w-full h-full object-cover"
                   />
 
                   <ClipPath />

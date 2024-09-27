@@ -17,7 +17,7 @@ const Hero = () => {
       className="pt-[12rem] -mt-[5.25rem] z-1"
       crosses
       crossesOffset="lg:translate-y-[5.25rem]"
-      customPaddings=""
+      customPaddings
     >
       <div className="container relative overflow-hidden">
         {/* Upper Part */}
@@ -96,6 +96,7 @@ const Hero = () => {
             />
           </div>
 
+          {/* Кольца и шары, которые двигаются за мышкой */}
           <BackgroundCircles />
         </div>
 
